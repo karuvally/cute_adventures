@@ -10,6 +10,9 @@ from PyQt5.QtCore import Qt
 # The class where everything happens
 class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
+        # Initialize QMainWindow object 
+        super(MainWindow, selfld
+
         # Set Window title
         self.SetWindowTitle("My awesome App")
         
