@@ -11,13 +11,17 @@ from PyQt5.QtCore import Qt
 class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         # Initialize QMainWindow object 
-        super(MainWindow, selfld
+        super(MainWindow, self).__init__(*args, **kwargs) 
 
         # Set Window title
-        self.SetWindowTitle("My awesome App")
+        self.setWindowTitle("My awesome App")
         
         # Add a label widget
         label = QLabel("UNIX is love!")
+        label.setAlignment(Qt.AlignCenter)
+
+        # Set the central widget
+        self.setCentralWidget(label)
 
 
 # Initialize the application
