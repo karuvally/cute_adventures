@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Lets do more with PyQt5 :)
+# Lets test signals (and slots)...
 
 # import serious stuff
 import sys
@@ -22,6 +22,13 @@ class MainWindow(QMainWindow):
 
         # Set the central widget
         self.setCentralWidget(label)
+
+        # Call our custom method when WindowTitle changes
+        self.windowTitleChanged.connect(self.onWindowTitleChange)
+
+    # This method gets called when window title gets changed
+    def onWindowTitleChange(self, new_title):
+        print("The new title is,", new_title)
 
 
 # Initialize the application
