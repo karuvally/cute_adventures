@@ -22,15 +22,15 @@ class MainWindow(QMainWindow):
 
         # Set the central widget
         self.setCentralWidget(label)
-
+        
         # Call our custom method when WindowTitle changes
-        self.windowTitleChanged.connect(self.onWindowTitleChange)
+        self.windowTitleChanged.connect(self.on_window_title_change)
 
         # Change the window title
         self.setWindowTitle("My awesome app!")
 
     # This method gets called when window title gets changed
-    def onWindowTitleChange(self, new_title):
+    def on_window_title_change(self, new_title):
         print("The new title is,", new_title)
 
 
