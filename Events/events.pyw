@@ -16,8 +16,8 @@ class MainWindow(QMainWindow):
         # Set Window title
         self.setWindowTitle("My events app")
 
-        def contextMenuEvent(self, event):
-            print("Context menu event was invoked")
+    def contextMenuEvent(self, event):
+        print("Context menu event was invoked")
 
 
 # Initialize the application
