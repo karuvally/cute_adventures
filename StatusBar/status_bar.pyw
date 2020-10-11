@@ -22,6 +22,7 @@ class MainWindow(QMainWindow):
 
         # Setup QAction for the Click! button
         button_action = QAction("Click!", self)
+        button_action.setCheckable(True)
         button_action.setStatusTip("This is the button!")
         button_action.triggered.connect(self.on_button_click)
         toolbar.addAction(button_action)
