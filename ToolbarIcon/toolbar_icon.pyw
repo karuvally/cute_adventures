@@ -34,6 +34,11 @@ class MainWindow(QMainWindow):
         button_action.triggered.connect(self.on_button_click)
         toolbar.addAction(button_action)
 
+        # Setup another button
+        another_button = QAction(
+            
+        )
+
         # Setup statusbar
         self.setStatusBar(QStatusBar(self))
 
