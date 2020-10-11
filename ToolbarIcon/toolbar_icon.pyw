@@ -35,9 +35,14 @@ class MainWindow(QMainWindow):
         toolbar.addAction(button_action)
 
         # Setup another button
-        another_button = QAction(
-            
+        water_button = QAction(
+            QIcon("water.png"),
+            "Turn on water",
+            self
         )
+        water_button.setStatusTip("Let it flow :)")
+        water_button.setCheckable(True)
+        toolbar.addAction(water_button)
 
         # Setup statusbar
         self.setStatusBar(QStatusBar(self))
