@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-# Implementing a toolbar
+# Implementing a status bar
 
 # Import serious stuff
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QToolBar
-from PyQt5.QtWidgets import QAction
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QAction, QStatusBar
 
 
 # The class where everything happens
@@ -21,11 +20,14 @@ class MainWindow(QMainWindow):
         toolbar = QToolBar("main_toolbar")
         self.addToolBar(toolbar)
 
-        # Setup QAction
+        # Setup QAction for the Click! button
         button_action = QAction("Click!", self)
         button_action.setStatusTip("This is the button!")
         button_action.triggered.connect(self.on_button_click)
         toolbar.addAction(button_action)
+
+        # Setup statusbar
+        self.setStatusBar(QStatusBar(self))
 
     # Define what happens when toolbar gets clicked
     def on_button_click(self, bool_value):
