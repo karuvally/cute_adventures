@@ -4,7 +4,7 @@
 # Import serious stuff
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QToolBar
-from PyQt5.QtWidgets import QAction, QStatusBar
+from PyQt5.QtWidgets import QAction, QStatusBar, QCheckBox
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 
@@ -44,6 +44,10 @@ class MainWindow(QMainWindow):
         water_button.setCheckable(True)
         water_button.triggered.connect(self.on_water_button)
         toolbar.addAction(water_button)
+
+        # Add a label and Checkbox widget
+        toolbar.addWidget(QLabel("Hello there!"))
+        toolbar.addWidget(QCheckBox())
 
         # Setup statusbar
         self.setStatusBar(QStatusBar(self))
