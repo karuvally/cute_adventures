@@ -42,6 +42,7 @@ class MainWindow(QMainWindow):
         )
         water_button.setStatusTip("Let it flow :)")
         water_button.setCheckable(True)
+        water_button.triggered.connect(self.on_water_button)
         toolbar.addAction(water_button)
 
         # Setup statusbar
@@ -50,6 +51,12 @@ class MainWindow(QMainWindow):
     # Define what happens when toolbar gets clicked
     def on_button_click(self, bool_value):
         print("Click", bool_value)
+    
+    def on_water_button(self, bool_value):
+        if bool_value:
+            print("Let the water flow")
+        else:
+            print("Water will be stopped for the time being")
 
 
 # Initialize the application
