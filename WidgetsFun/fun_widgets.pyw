@@ -36,11 +36,23 @@ class MainWindow(QMainWindow):
             QSpinBox,
             QTimeEdit
         ]
+        
+        # Add each of the widgets to the layout
         for w in widgets:
             layout.addWidget(w)
         
+        # Setup a QWidget object and add the layout to QWidget
         widget = QWidget()
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
-        
+
+# Setup the QApplication instance
+app = QApplication(sys.argv)
+
+# Setup and show the window
+window = MainWindow()
+window.show()
+
+# Start the event loop
+app.exec_()
