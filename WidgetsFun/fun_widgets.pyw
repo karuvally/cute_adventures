@@ -36,3 +36,11 @@ class MainWindow(QMainWindow):
             QSpinBox,
             QTimeEdit
         ]
+        for w in widgets:
+            layout.addWidget(w)
+        
+        widget = QWidget()
+        widget.setLayout(layout)
+        self.setCentralWidget(widget)
+
+        
