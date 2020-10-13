@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         
         # Add each of the widgets to the layout
         for w in widgets:
-            layout.addWidget(w)
+            layout.addWidget(w())
         
         # Setup a QWidget object and add the layout to QWidget
         widget = QWidget()
